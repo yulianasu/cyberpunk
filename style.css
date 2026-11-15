@@ -12,28 +12,36 @@ body {
     background: #05050d;
     color: #00f3ff;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
     letter-spacing: 5px;
     text-shadow: 0 0 10px #00f3ff, 0 0 25px #ff007f;
     margin-bottom: 5px;
+    font-size: 22px;
+    text-align: center;
 }
 
 .hud {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 16px;
     text-shadow: 0 0 8px #00f3ff;
 }
 
+/* Вертикальный адаптивный холст */
 canvas {
     background: #020208;
     border: 2px solid #00f3ff;
     border-radius: 10px;
     box-shadow: 0 0 20px #00f3ff, 0 0 50px rgba(255, 0, 127, 0.5);
     cursor: pointer;
+    
+    width: 92vw;
+    max-width: 420px; /* Ограничение по ширине для ПК */
+    height: auto;
+    touch-action: none;
 }
 
 /* Стили для модального окна проигрыша */
@@ -55,20 +63,21 @@ canvas {
     background: #020208;
     border: 3px solid #ff0055;
     box-shadow: 0 0 30px #ff0055;
-    padding: 35px 45px;
+    padding: 30px 35px;
     border-radius: 15px;
     text-align: center;
+    max-width: 90%;
 }
 
 .modal-content h1 {
     color: #ff0055;
-    font-size: 24px;
+    font-size: 20px;
     text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
     margin-bottom: 15px;
 }
 
 .modal-content p {
-    font-size: 20px;
+    font-size: 18px;
     color: #00f3ff;
     font-family: monospace;
     margin-bottom: 25px;
@@ -90,17 +99,4 @@ canvas {
 .modal-content button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px #ff0055;
-}
-
-canvas {
-    background: #020208;
-    border: 2px solid #00f3ff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #00f3ff, 0 0 50px rgba(255, 0, 127, 0.5);
-    cursor: pointer;
-    
-    /* Делаем холст адаптивным для телефонов */
-    max-width: 100%;
-    height: auto;
-    touch-action: none; /* Запрещаем скролл страницы при касании игры */
 }
