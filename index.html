@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Defender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CYBERPUNK</h1>
+
+    <div class="hud">
+        SCORE: <span id="score">0</span> | HP: <span id="hp">100</span>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Окно проигрыша -->
+    <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+            <h1>ВЫ ПРОИГРАЛИ В ЮЛИНУ ИГРУ</h1>
+            <p>ВАШ СЧЕТ: <span id="finalScore">0</span></p>
+            <button onclick="location.reload()">ИГРАТЬ СНОВА</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
