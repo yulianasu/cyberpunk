@@ -91,3 +91,16 @@ canvas {
     transform: scale(1.05);
     box-shadow: 0 0 25px #ff0055;
 }
+
+canvas {
+    background: #020208;
+    border: 2px solid #00f3ff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00f3ff, 0 0 50px rgba(255, 0, 127, 0.5);
+    cursor: pointer;
+    
+    /* Делаем холст адаптивным для телефонов */
+    max-width: 100%;
+    height: auto;
+    touch-action: none; /* Запрещаем скролл страницы при касании игры */
+}
